@@ -95,7 +95,7 @@ jobs:
           IMAGE: ${{ steps.release.outputs.image }}
           DIGEST: ${{ steps.build.outputs.digest }}
         run: |
-          printf 'Candidate: `%s@%s`\n\nNo stable/latest promotion or deployment performed.\n' "$IMAGE" "$DIGEST" >> "$GITHUB_STEP_SUMMARY"
+          printf 'Candidate: %s@%s\n\nNo stable/latest promotion or deployment performed.\n' "$IMAGE" "$DIGEST" >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always() && steps.build.outcome == 'success'
         with:
