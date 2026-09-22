@@ -1,0 +1,1903 @@
+{
+  "image_id": "sha256:e895e03fab17c52635b80b48355a5ee3229750f62a496e9995ec7a20deca6c7f",
+  "scanner": {
+    "Version": "0.74.0"
+  },
+  "created_at": "2026-09-22T14:52:19.547126664Z",
+  "original_report_sha256": "687a81ab8c51533a89d362433b4c9a45a78da0631178f1ffa03967e40caa4b89",
+  "scope": "HIGH,CRITICAL including unfixed; local image, not registry index",
+  "unique_advisories": 46,
+  "package_matches": 210,
+  "findings": [
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "bsdutils",
+      "InstalledVersion": "1:2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "bsdutils",
+      "InstalledVersion": "1:2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "bsdutils",
+      "InstalledVersion": "1:2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "bsdutils",
+      "InstalledVersion": "1:2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-58049",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-58049"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64830",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64830"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64832",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64832"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64833",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64833"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64834",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: Denial of Service via crafted RTP/ASF stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64834"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64835",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64835"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66036",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66039",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66039"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66040",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PNG image",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66040"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66041",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PGS/SUP subtitle file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66041"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70628",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70628"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70632",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70632"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75142",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75143",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75144",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75146",
+      "PkgName": "ffmpeg",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75146"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-54369",
+      "PkgName": "libacl1",
+      "InstalledVersion": "2.3.2-2+b1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "acl: Symlink traversal privilege escalation via libacl functions",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-54369"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-58049",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-58049"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64830",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64830"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64832",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64832"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64833",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64833"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64834",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: Denial of Service via crafted RTP/ASF stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64834"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64835",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64835"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66036",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66039",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66039"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66040",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PNG image",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66040"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66041",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PGS/SUP subtitle file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66041"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70628",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70628"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70632",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70632"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75142",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75143",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75144",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75146",
+      "PkgName": "libavcodec61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75146"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-58049",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-58049"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64830",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64830"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64832",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64832"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64833",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64833"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64834",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: Denial of Service via crafted RTP/ASF stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64834"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64835",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64835"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66036",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66039",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66039"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66040",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PNG image",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66040"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66041",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PGS/SUP subtitle file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66041"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70628",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70628"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70632",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70632"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75142",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75143",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75144",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75146",
+      "PkgName": "libavdevice61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75146"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-58049",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-58049"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64830",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64830"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64832",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64832"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64833",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64833"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64834",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: Denial of Service via crafted RTP/ASF stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64834"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64835",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64835"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66036",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66039",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66039"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66040",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PNG image",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66040"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66041",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PGS/SUP subtitle file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66041"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70628",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70628"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70632",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70632"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75142",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75143",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75144",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75146",
+      "PkgName": "libavfilter10",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75146"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-58049",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-58049"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64830",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64830"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64832",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64832"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64833",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64833"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64834",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: Denial of Service via crafted RTP/ASF stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64834"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64835",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64835"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66036",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66039",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66039"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66040",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PNG image",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66040"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66041",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PGS/SUP subtitle file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66041"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70628",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70628"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70632",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70632"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75142",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75143",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75144",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75146",
+      "PkgName": "libavformat61",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75146"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-58049",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-58049"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64830",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64830"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64832",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64832"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64833",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64833"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64834",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: Denial of Service via crafted RTP/ASF stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64834"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64835",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64835"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66036",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66039",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66039"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66040",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PNG image",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66040"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66041",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PGS/SUP subtitle file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66041"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70628",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70628"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70632",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70632"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75142",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75143",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75144",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75146",
+      "PkgName": "libavutil59",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75146"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "libblkid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "libblkid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "libblkid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "libblkid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-16554",
+      "PkgName": "libcjson1",
+      "InstalledVersion": "1.7.18-3.1+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "cJSON: cJSON: Remote code execution due to integer overflow via crafted JSON",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-16554"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-29036",
+      "PkgName": "libcjson1",
+      "InstalledVersion": "1.7.18-3.1+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "cJSON: cJSON: Data corruption and unauthorized modification via JSON Pointer escape decoding",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-29036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-67215",
+      "PkgName": "libcjson1",
+      "InstalledVersion": "1.7.18-3.1+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "cJSON: cJSON: Denial of Service via uncontrolled recursion in JSON Patch application",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-67215"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-67216",
+      "PkgName": "libcjson1",
+      "InstalledVersion": "1.7.18-3.1+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "cJSON: Denial of Service due to inefficient JSON object comparison",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-67216"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-87933",
+      "PkgName": "libcjson1",
+      "InstalledVersion": "1.7.18-3.1+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "cJSON: cJSON: Memory corruption via use after free in cJSONUtils_MergePatch",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-87933"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66046",
+      "PkgName": "libexpat1",
+      "InstalledVersion": "2.8.3-1~deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "expat: Expat: Denial of Service via quadratic complexity in attribute processing",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66046"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76956",
+      "PkgName": "libexpat1",
+      "InstalledVersion": "2.8.3-1~deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libexpat: libexpat: Denial of Service via hash flooding attack with crafted XML",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76956"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76957",
+      "PkgName": "libexpat1",
+      "InstalledVersion": "2.8.3-1~deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libexpat: libexpat: Memory corruption vulnerability allows arbitrary code execution or denial of service",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76957"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "liblastlog2-2",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "liblastlog2-2",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "liblastlog2-2",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "liblastlog2-2",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "libmount1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "libmount1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "libmount1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "libmount1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2025-69720",
+      "PkgName": "libncursesw6",
+      "InstalledVersion": "6.5+20250216-2",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-69720"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-58049",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-58049"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64830",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64830"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64832",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64832"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64833",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64833"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64834",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: Denial of Service via crafted RTP/ASF stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64834"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64835",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64835"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66036",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66039",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66039"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66040",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PNG image",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66040"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66041",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PGS/SUP subtitle file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66041"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70628",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70628"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70632",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70632"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75142",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75143",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75144",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75146",
+      "PkgName": "libpostproc58",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75146"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "libsmartcols1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "libsmartcols1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "libsmartcols1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "libsmartcols1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-37555",
+      "PkgName": "libsndfile1",
+      "InstalledVersion": "1.2.2-2+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libsndfile: integer overflow in ima_reader_init()",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-37555"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-58049",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-58049"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64830",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64830"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64832",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64832"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64833",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64833"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64834",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: Denial of Service via crafted RTP/ASF stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64834"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64835",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64835"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66036",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66039",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66039"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66040",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PNG image",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66040"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66041",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PGS/SUP subtitle file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66041"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70628",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70628"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70632",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70632"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75142",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75143",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75144",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75146",
+      "PkgName": "libswresample5",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75146"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-58049",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-58049"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64830",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64830"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64832",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64832"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64833",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64833"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64834",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: Denial of Service via crafted RTP/ASF stream",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64834"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-64835",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-64835"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66036",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66036"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66039",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66039"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66040",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PNG image",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66040"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-66041",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted PGS/SUP subtitle file",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-66041"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70628",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70628"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-70632",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-70632"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75142",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75143",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75144",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-75146",
+      "PkgName": "libswscale8",
+      "InstalledVersion": "7:7.1.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-75146"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-16742",
+      "PkgName": "libsystemd0",
+      "InstalledVersion": "257.13-1~deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "systemd: systemd-homed: Local privilege escalation via missing home-record signature verification",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-16742"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-36849",
+      "PkgName": "libtiff6",
+      "InstalledVersion": "4.7.0-3+deb13u3",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "[Denial of Service via large SamplesPerPixel tag]",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-36849"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-52490",
+      "PkgName": "libtiff6",
+      "InstalledVersion": "4.7.0-3+deb13u3",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libtiff: libtiff: Arbitrary code execution via process_command_opts() function",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-52490"
+    },
+    {
+      "VulnerabilityID": "CVE-2025-69720",
+      "PkgName": "libtinfo6",
+      "InstalledVersion": "6.5+20250216-2",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-69720"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-16742",
+      "PkgName": "libudev1",
+      "InstalledVersion": "257.13-1~deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "systemd: systemd-homed: Local privilege escalation via missing home-record signature verification",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-16742"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "libuuid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "libuuid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "libuuid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "libuuid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-6653",
+      "PkgName": "libxml2",
+      "InstalledVersion": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+      "FixedVersion": "",
+      "Severity": "CRITICAL",
+      "Title": "libxml2: mingw-libxml2: libxml2: Denial of Service via crafted XML input due to use-after-free",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-6653"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-74860",
+      "PkgName": "libxml2",
+      "InstalledVersion": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libxml2: double-free/UAF in libxml2 Python bindings",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-74860"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-86138",
+      "PkgName": "libxml2",
+      "InstalledVersion": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libxml2: libxml2: Arbitrary code execution via heap-based buffer overflow",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-86138"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-86139",
+      "PkgName": "libxml2",
+      "InstalledVersion": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libxml2: libxml2: Integer overflow in xmlURIEscapeStr may lead to arbitrary code execution",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-86139"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-86140",
+      "PkgName": "libxml2",
+      "InstalledVersion": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libxml2: libxml2: Arbitrary code execution via stack-based buffer overflow in xmlSnprintfElements",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-86140"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-86142",
+      "PkgName": "libxml2",
+      "InstalledVersion": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libxml2: libxml2: Heap-based buffer overflow in xmlXPtrEval due to xpointer length saturation",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-86142"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-86143",
+      "PkgName": "libxml2",
+      "InstalledVersion": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libxml2: libxml2: Data integrity issues due to integer overflow in write callbacks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-86143"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-86144",
+      "PkgName": "libxml2",
+      "InstalledVersion": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "libxml2: libxml2: Information disclosure, SSRF, or denial of service due to improper parseFlags propagation.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-86144"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "login",
+      "InstalledVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "login",
+      "InstalledVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "login",
+      "InstalledVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "login",
+      "InstalledVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "mount",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "mount",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "mount",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "mount",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2025-69720",
+      "PkgName": "ncurses-base",
+      "InstalledVersion": "6.5+20250216-2",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-69720"
+    },
+    {
+      "VulnerabilityID": "CVE-2025-69720",
+      "PkgName": "ncurses-bin",
+      "InstalledVersion": "6.5+20250216-2",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-69720"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-9538",
+      "PkgName": "perl-base",
+      "InstalledVersion": "5.40.1-6+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "perl-Archive-Tar: perl-Archive-Tar: Denial of Service via crafted tar header with large entry size",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-9538"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "util-linux",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "util-linux",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "util-linux",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "util-linux",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": "",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-4372",
+      "PkgName": "transformers",
+      "InstalledVersion": "4.57.3",
+      "FixedVersion": "5.3.0",
+      "Severity": "HIGH",
+      "Title": "HuggingFace transformers vulnerable to remote code execution",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-4372"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-5241",
+      "PkgName": "transformers",
+      "InstalledVersion": "4.57.3",
+      "FixedVersion": "5.5.0",
+      "Severity": "HIGH",
+      "Title": "python-transformers: python-transformers: Arbitrary code execution due to overridden trust_remote_code setting",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-5241"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-9856",
+      "PkgName": "transformers",
+      "InstalledVersion": "4.57.3",
+      "FixedVersion": "5.10.0",
+      "Severity": "HIGH",
+      "Title": "Transformers save_pretrained path traversal allows arbitrary file writes through chat template names",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-9856"
+    }
+  ]
+}

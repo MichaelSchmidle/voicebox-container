@@ -1,0 +1,73 @@
+name: Promote GPU-validated candidate digest
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_digest:
+        description: Exact candidate OCI index sha256 digest tested on GPU
+        required: true
+        type: string
+      packaging_commit:
+        description: Exact reviewed packaging commit used to build the candidate
+        required: true
+        type: string
+      gpu_evidence_url:
+        description: Public issue or PR evidence URL in this repository (no private host details)
+        required: true
+        type: string
+      security_evidence_url:
+        description: Repository issue or PR recording exact-digest scan, dispositions, owners and review triggers
+        required: true
+        type: string
+      security_reviewed:
+        description: I attest packaging risks are addressed and inherited risks explicitly assessed for publication
+        required: true
+        default: false
+        type: boolean
+      gpu_validated:
+        description: I attest this exact digest passed ARM64 CUDA GPU startup and synthesis tests
+        required: true
+        default: false
+        type: boolean
+permissions:
+  contents: read
+concurrency:
+  group: release-publish
+  cancel-in-progress: false
+jobs:
+  promote:
+    if: github.repository == 'MichaelSchmidle/voicebox-container' && github.ref == 'refs/heads/main'
+    environment: release
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+      packages: write
+      attestations: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+      - name: Verify trusted provenance, evidence, monotonic tags and promote exact bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_DIGEST: ${{ inputs.candidate_digest }}
+          PACKAGING_COMMIT: ${{ inputs.packaging_commit }}
+          GPU_EVIDENCE_URL: ${{ inputs.gpu_evidence_url }}
+          GPU_VALIDATED: ${{ inputs.gpu_validated }}
+          SECURITY_EVIDENCE_URL: ${{ inputs.security_evidence_url }}
+          SECURITY_REVIEWED: ${{ inputs.security_reviewed }}
+        run: python3 scripts/release.py promote
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: promotion-audit
+          path: |
+            promotion-record.json
+            promotion-verification.json
+          if-no-files-found: warn
