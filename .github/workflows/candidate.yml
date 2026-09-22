@@ -1,0 +1,104 @@
+name: Build ARM64 CUDA candidate
+on:
+  workflow_dispatch:
+    inputs:
+      packaging_commit:
+        description: Exact reviewed main commit SHA (must equal dispatch commit)
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: release-publish
+  cancel-in-progress: false
+jobs:
+  candidate:
+    if: github.repository == 'MichaelSchmidle/voicebox-container' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 180
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Validate reviewed pins and immutable candidate name
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACKAGING_COMMIT: ${{ inputs.packaging_commit }}
+        run: |
+          test "$(uname -m)" = aarch64
+          python3 -m unittest discover -s tests -v
+          python3 scripts/release.py prepare
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
+      - uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+      - name: Native build, OCI SBOM and maximal provenance
+        id: build
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
+        with:
+          context: .
+          platforms: linux/arm64
+          push: true
+          tags: ${{ steps.release.outputs.image }}:${{ steps.release.outputs.tag }}
+          provenance: mode=max
+          sbom: true
+          build-args: |
+            UPSTREAM_VERSION=${{ steps.release.outputs.version }}
+            UPSTREAM_COMMIT=${{ steps.release.outputs.source }}
+            PACKAGING_REVISION=${{ steps.release.outputs.revision }}
+          annotations: |
+            index:org.opencontainers.image.source=https://github.com/MichaelSchmidle/voicebox-container
+            index:org.opencontainers.image.revision=${{ github.sha }}
+            index:io.voicebox.packaging.upstream=jamiepine/voicebox
+            index:io.voicebox.packaging.version=${{ steps.release.outputs.version }}
+            index:io.voicebox.packaging.source=${{ steps.release.outputs.source }}
+            index:io.voicebox.packaging.revision=${{ steps.release.outputs.revision }}
+            index:io.voicebox.packaging.commit=${{ github.sha }}
+      - name: Scan the exact candidate digest (findings disclosed; scanner failures block signing)
+        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1 # 0.35.0
+        with:
+          image-ref: ${{ steps.release.outputs.image }}@${{ steps.build.outputs.digest }}
+          format: json
+          output: candidate-scan.json
+          severity: HIGH,CRITICAL
+          ignore-unfixed: false
+          exit-code: '0'
+          scanners: vuln
+          cache: false
+        env:
+          TRIVY_USERNAME: ${{ github.actor }}
+          TRIVY_PASSWORD: ${{ github.token }}
+      - name: Require valid scan evidence
+        run: python3 -c 'import json; d=json.load(open("candidate-scan.json")); assert d.get("Results") and d.get("ArtifactName"), "missing scan evidence"'
+      - name: Preserve mandatory scan evidence before signing
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: candidate-scan-required
+          path: candidate-scan.json
+          if-no-files-found: error
+      - name: Sign build provenance (not a vulnerability-free claim)
+        uses: actions/attest-build-provenance@43d14bc2b83dec42d39ecae14e916627a18bb661 # v3
+        with:
+          subject-name: ${{ steps.release.outputs.image }}
+          subject-digest: ${{ steps.build.outputs.digest }}
+          push-to-registry: true
+      - name: Record exact digest for external GPU validation
+        env:
+          IMAGE: ${{ steps.release.outputs.image }}
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: |
+          printf 'Candidate: %s@%s\n\nNo stable/latest promotion or deployment performed.\n' "$IMAGE" "$DIGEST" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always() && steps.build.outcome == 'success'
+        with:
+          name: candidate-scan
+          path: candidate-scan.json
+          if-no-files-found: warn

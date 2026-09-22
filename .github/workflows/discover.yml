@@ -1,0 +1,37 @@
+name: Discover upstream stable releases
+on:
+  workflow_dispatch:
+  # Deliberately disabled until maintainers review and enable automation:
+  # schedule:
+  #   - cron: '23 8 * * 2'
+permissions:
+  contents: read
+concurrency:
+  group: upstream-discovery
+  cancel-in-progress: false
+jobs:
+  discover:
+    if: github.repository == 'MichaelSchmidle/voicebox-container' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write # Explicit checks dispatch: token-created PRs do not trigger PR CI.
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Discover and resolve stable source
+        id: discover
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/release.py discover
+      - name: Check proposed tree before opening PR
+        if: steps.discover.outputs.changed == 'true'
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 scripts/release.py validate
+          python3 scripts/release_lint.py
+      - name: Open pin update PR and explicitly dispatch read-only checks
+        if: steps.discover.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/release_pr.py

@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.actionlint-*/
+promotion-record.json
+promotion-verification.json
+candidate-scan.json
