@@ -25,7 +25,7 @@ RUN pip install --no-cache-dir --prefix=/install --no-deps chatterbox-tts==0.1.7
 FROM python:3.12-slim-trixie@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9
 ARG UPSTREAM_VERSION=0.5.0
 ARG UPSTREAM_COMMIT=2bcb98d1a8b6fe05e15fbc1559e3085669e4035d
-ARG PACKAGING_REVISION=3
+ARG PACKAGING_REVISION=4
 LABEL org.opencontainers.image.source="https://github.com/MichaelSchmidle/voicebox-container" \
       org.opencontainers.image.version="${UPSTREAM_VERSION}-r${PACKAGING_REVISION}" \
       org.opencontainers.image.revision="$UPSTREAM_COMMIT" \
