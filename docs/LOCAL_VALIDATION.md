@@ -1,6 +1,6 @@
 # Initial ARM64 CUDA candidate validation
 
-This is local image evidence, not a registry release or attestation. Packaging remains under development.
+This document retains historical local image evidence; those local image IDs are not registry release identities or attestations. The later [r4 registry-candidate evidence](https://github.com/MichaelSchmidle/voicebox-container/issues/3) records exact-digest health, CUDA and Qwen CustomVoice validation plus independent publication approval. The [2026-09-22 promotion](https://github.com/MichaelSchmidle/voicebox-container/actions/runs/35751664330) published `v0.5.0-r4` and `latest`; see [release identity and security disposition](SECURITY_STATUS.md#published-release). No production deployment or migration was validated.
 
 ## Tested image
 
@@ -32,11 +32,11 @@ This is local image evidence, not a registry release or attestation. Packaging r
 - PyTorch capability warning persists; successful tests do not remove that limitation.
 - Scan inventory and inherited-risk assessment: [SECURITY_STATUS.md](SECURITY_STATUS.md).
 
-## Limits and remaining gates
+## Validation limits
 
 - PyTorch warns that reported compiled capability coverage ends at 12.0 while GB10 reports 12.1. The kernel and this synthesis passed; that does not establish every engine/kernel is compatible.
 - Tested Qwen CustomVoice only; cloned Qwen, other engines, transcription, adapter end-to-end compatibility and subjective audio quality remain unverified.
 - No production data, migrations or deployment tested.
-- Initial scan and subsequent hardening are documented in SECURITY_STATUS.md. No independent review, hosted-runner build or registry publication has completed.
+- Initial scan and subsequent hardening are documented in SECURITY_STATUS.md. The later r4 evidence and promotion linked above establish the hosted build, independent publication approval and registry publication; the historical local tests alone do not.
 - Dependency versions/base image digests and upstream archive checksum are pinned, but frontend installation and source-package build dependencies still require reproducibility review. Do not claim bit-for-bit reproducibility.
-- The automation draft and Dockerfile need integration review before release. Source checksum currently intentionally fails closed for any upstream commit other than the reviewed initial release.
+- The first candidate and promotion workflows have completed; this does not validate scheduled discovery or unattended rebuilds. Source checksum currently intentionally fails closed for any upstream commit other than the reviewed initial release.

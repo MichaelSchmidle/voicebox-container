@@ -1,4 +1,12 @@
-# Security disposition: upstream v0.5.0, packaging r3
+# Security disposition: upstream v0.5.0, packaging r4
+
+## Published release
+
+On 2026-09-22, the [successful promotion](https://github.com/MichaelSchmidle/voicebox-container/actions/runs/35751664330) published `ghcr.io/michaelschmidle/voicebox-container:v0.5.0-r4` and updated `latest` to OCI index digest `sha256:a6f581f66302261115b588527921ab3f21ce60e78ff57c2987f00dc7569b41f5`, built from packaging commit `dd798938c1738cefdfe0dbb3fbed640d4f5406a7`.
+
+The [r4 candidate evidence](https://github.com/MichaelSchmidle/voicebox-container/issues/3) records exact-digest GPU/synthesis validation and a fresh Trivy 0.74.0 scan. Its 46 distinct HIGH/CRITICAL advisory IDs across 210 package matches (209 HIGH, 1 CRITICAL, including unfixed findings) match every finding tuple in the retained [r3 inventory](security-scan-r3.json); that file's local image metadata is historical, not r4 registry identity. These are release-time findings, not a current rescan.
+
+The [independent publication approval](https://github.com/MichaelSchmidle/voicebox-container/issues/3#issuecomment-5779475670) accepted the disclosed inherited risks for distribution of this exact candidate. Promotion subsequently completed the separate release-environment approval gate. Neither approval nor publication establishes vulnerability-free software, accepts future candidates or authorizes a deployment. The applicability, owners, review triggers and deployment conditions below remain in force.
 
 ## Policy
 
@@ -6,7 +14,7 @@ This repository packages unmodified Voicebox source, not a security-patch fork. 
 
 Do not silently force transformers 5.x against the upstream/Qwen constraints. Maintainers own packaging choices and disclosure; upstream projects own compatible library/application fixes; operators own deployment acceptance. Every new candidate requires fresh review, not a blanket inherited-risk exemption.
 
-## Packaging changes and evidence
+## Historical r3 packaging changes and local evidence
 
 Local image `sha256:e895e03fab17c52635b80b48355a5ee3229750f62a496e9995ec7a20deca6c7f`:
 
@@ -25,7 +33,7 @@ Local image `sha256:e895e03fab17c52635b80b48355a5ee3229750f62a496e9995ec7a20deca
 | transformers CVE-2026-9856; listed fix 5.10.0 | Malicious chat-template names can affect save_pretrained. No save_pretrained invocation was found in Voicebox backend Python; dependency-internal calls and untested engines are not ruled out. | Disclose; upstream owns fix. Reassess when tokenizer/processor saving, model import or dependency behavior changes. |
 | Debian multimedia/system libraries | FFmpeg/libav account for repeated matches against shared source advisories. Audio parsing is real functionality, so malicious media is a credible surface. The sole CRITICAL match is libxml2 CVE-2026-6653 (crafted XML use-after-free/DoS); its route through this application has not been established. The report lists no fixed versions for these Debian 13 matches. This does not establish absence of vendor fixes elsewhere. | Disclose without reachability claims. Debian/component upstream owns patches; packaging maintainer owns refreshing the base/packages. Reassess each candidate, newly available fixes or material exploit information. |
 
-This assessment supports continued packaging and independent release review; it does not assert that every finding is acceptable in every deployment. No stable release has yet been approved.
+These dispositions were independently accepted for publication of the exact r4 candidate identified above; they do not assert that every finding is acceptable in every deployment or waive review of later candidates.
 
 ## Deployment conditions to assess separately
 

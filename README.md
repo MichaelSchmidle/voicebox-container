@@ -2,7 +2,9 @@
 
 Thin packaging of [Voicebox](https://github.com/jamiepine/voicebox) stable releases for Linux ARM64 CUDA. Upstream application source stays unchanged; this is not an application fork. Deployment is separate from image publication.
 
-**Initial packaging is under review. No stable registry image is published yet.** A native NVIDIA GB10 build of upstream v0.5.0 has passed CUDA execution, health and Qwen CustomVoice synthesis. Other engines and production migrations are untested. See [validation](docs/LOCAL_VALIDATION.md) and [security findings/disposition](docs/SECURITY_STATUS.md).
+**Stable image published: `ghcr.io/michaelschmidle/voicebox-container:v0.5.0-r4`.** The [2026-09-22 promotion](https://github.com/MichaelSchmidle/voicebox-container/actions/runs/35751664330) set `v0.5.0-r4` and `latest` to OCI index digest `sha256:a6f581f66302261115b588527921ab3f21ce60e78ff57c2987f00dc7569b41f5` (packaging commit `dd798938c1738cefdfe0dbb3fbed640d4f5406a7`). Prefer the versioned tag or exact digest for traceability; `latest` is mutable.
+
+The [exact-registry-digest evidence and independent publication approval](https://github.com/MichaelSchmidle/voicebox-container/issues/3) cover NVIDIA GB10 CUDA execution, health and Qwen CustomVoice synthesis for upstream v0.5.0. Publication accepts the disclosed inherited vulnerabilities, not a deployment or a vulnerability-free image. Other engines and production migrations remain untested. See [validation history and limits](docs/LOCAL_VALIDATION.md) and [security findings/disposition](docs/SECURITY_STATUS.md).
 
 ## Build and test locally
 
