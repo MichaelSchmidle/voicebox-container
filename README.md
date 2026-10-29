@@ -28,6 +28,8 @@ This example uses disposable container storage. Open http://127.0.0.1:17495. Run
 
 Upstream discovery runs weekly on Tuesdays at 08:23 UTC and can also be started manually. It can open a reviewable pin-update PR; it never builds or publishes an image. Candidate builds and promotion remain manual workflows. [Release automation](docs/RELEASE_AUTOMATION.md) records settings, verification evidence, remaining integration limits and how to disable the schedule. Local tests do not establish hosted-runner capacity or registry publication.
 
+GitHub automatically disables scheduled workflows in public repositories after 60 days without repository activity. Check the workflow's Actions page and re-enable it if needed; absence of an update PR is not proof that discovery ran or found no newer release.
+
 Pinned inputs improve traceability; this build does **not** yet promise bit-for-bit reproducibility: apt repositories, frontend dependency resolution, source-package build dependencies and runtime model revisions remain moving inputs. The source archive checksum currently fails closed on unreviewed upstream changes.
 
 Retire this packaging when upstream supplies an equivalent maintained ARM64 CUDA image.
