@@ -1,9 +1,8 @@
 name: Discover upstream stable releases
 on:
   workflow_dispatch:
-  # Deliberately disabled until maintainers review and enable automation:
-  # schedule:
-  #   - cron: '23 8 * * 2'
+  schedule:
+    - cron: '23 8 * * 2' # Tuesdays at 08:23 UTC; discovery/PRs only.
 permissions:
   contents: read
 concurrency:

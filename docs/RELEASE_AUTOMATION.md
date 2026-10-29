@@ -36,13 +36,25 @@ It must fetch the exact upstream commit (not a moving version tag), verify/recon
 
 ## Discovery and PR checks
 
-`discover.yml` is manually dispatchable on main. A weekly schedule is provided as **commented, disabled YAML**; only enable it after review. Discovery paginates upstream releases, filters drafts/prereleases/malformed versions, chooses the newest strictly greater semantic version, and resolves the release tag through the GitHub commits endpoint. Both annotated and lightweight tags resolve to the committed source SHA. Network reads retry transient failures a bounded number of times; authorization failures do not become empty results.
+`discover.yml` runs on main every Tuesday at **08:23 UTC** (`23 8 * * 2`) and remains manually dispatchable. It discovers reviewable updates only; candidate builds and promotion are still manual. Discovery paginates upstream releases, filters drafts/prereleases/malformed versions, chooses the newest strictly greater semantic version, and resolves the release tag through the GitHub commits endpoint. Both annotated and lightweight tags resolve to the committed source SHA. Network reads retry transient failures a bounded number of times; authorization failures do not become empty results.
 
 An update goes to `automation/upstream-vVERSION`; existing branches are never force-pushed and closed PRs are not automatically reopened. An existing mismatched pin requires human reconciliation. Before creating a PR, discovery runs the same tests, schema validation and workflow lint as normal checks.
 
-**A `GITHUB_TOKEN`-created PR does not automatically run pull-request CI.** Discovery therefore explicitly dispatches `checks.yml` against the update branch using its `actions: write` permission. Workflow dispatch is one of GitHub's exceptions to recursive token-trigger suppression. Verify the dispatched `Packaging checks / checks` result on the current PR head before merging; a successful dispatch only requests a run and does not establish green CI. Standard pull requests and main pushes also run this read-only check job. Branch protection must require it. PR jobs receive no package publishing or OIDC permissions and never run on private hardware.
+**Do not rely on automatic pull-request CI for a `GITHUB_TOKEN`-created PR.** Discovery explicitly dispatches `checks.yml` against the update branch using its `actions: write` permission. The disposable integration canary produced a separate pull-request run requiring approval; that run was not used as verification. The explicit workflow dispatch ran successfully without approving or bypassing it. Verify the dispatched `Packaging checks / checks` result on the current PR head before merging; a successful dispatch only requests a run and does not establish green CI. Standard pull requests and main pushes also run this read-only check job. Branch protection must require the `checks` context from GitHub Actions. PR jobs receive no package publishing or OIDC permissions and never run on private hardware.
 
 If a maintainer changes dependencies on the update branch, those human pushes normally trigger PR checks; verify the latest head again. Rerunning discovery never overwrites such follow-up changes when the release pin still matches.
+
+### Activation evidence and remaining limits
+
+The [2026-10-29 verification record](https://github.com/MichaelSchmidle/voicebox-container/issues/4#issuecomment-6493826750) separates the following evidence:
+
+- The [real main discovery run](https://github.com/MichaelSchmidle/voicebox-container/actions/runs/40847899065) succeeded at `14233c12d8d23205c78886a5daf17f074eb7bc87` and found no newer stable release than v0.5.0.
+- A [disposable hosted-token canary](https://github.com/MichaelSchmidle/voicebox-container/actions/runs/40854970089) pushed a test branch, created a draft PR against a disposable base, verified its identity/state and explicitly dispatched checks. The [checks run](https://github.com/MichaelSchmidle/voicebox-container/actions/runs/40855017989) passed all 36 tests, schema validation and workflow lint at exact test head `94ca41ab735cbe45c5a1cc6f35dd287289510eac`.
+- Main reports branch protection enabled. Owner settings readback records one required review, stale-approval dismissal, strict GitHub Actions `checks`, admin enforcement and blocked force-push/deletion. Owner readback also records default workflow token access `read` and the combined Actions PR creation/approval setting enabled; discovery does not submit approvals.
+
+The canary used a text fixture, not a fabricated upstream release or changed production pin. It did **not** execute production `release_pr.main` or the complete newer-release path on main. Existing mocked tests cover that orchestration; its first genuine newer-release execution remains to be observed. Source archive checksums and dependency/build locks still require manual reconciliation before a candidate build. Scheduling discovery accepts these bounded integration limits; it does not approve a future PR, image or deployment.
+
+To stop scheduled discovery, remove/comment the `schedule` entry through a reviewed change; keep `workflow_dispatch` for manual use. GitHub's workflow-disable control stops manual runs too. No candidate builds or stable promotions are enabled by this schedule.
 
 ## Candidate build (manual, never stable)
 
@@ -91,11 +103,11 @@ If the version write succeeds but latest fails, the workflow fails; rerunning wi
 ## Local verification
 
 ```sh
-python3 -m unittest discover -s tests -p 'test_release*.py' -v
+python3 -m unittest discover -s tests -v
 python3 scripts/release.py validate
 python3 scripts/release_lint.py
 ```
 
 Tests are Python-standard-library-only and mock all GitHub/registry writes and external operations. `release_lint.py` downloads actionlint 1.7.7 for Linux AMD64/ARM64, verifies a pinned SHA-256 checksum, runs it, and removes the temporary executable. Shellcheck is used by actionlint when present. Workflow action references are pinned to commits; updates require review.
 
-Local unit tests and workflow lint do **not** verify hosted-runner capacity, an actual ARM64 build, GHCR token/attestation interoperability or GPU synthesis. Those remain explicit integration gates. No schedule is enabled and no images are built/published/promoted merely by adding these files.
+Local unit tests and workflow lint do **not** verify hosted-runner capacity, an actual ARM64 build, GHCR token/attestation interoperability or GPU synthesis. Those remain explicit integration gates. The scheduled workflow discovers upstream updates only; it never builds, publishes, promotes or deploys an image.

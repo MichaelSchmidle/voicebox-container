@@ -26,7 +26,7 @@ This example uses disposable container storage. Open http://127.0.0.1:17495. Run
 - Promote the exact tested registry digest to immutable `vVERSION-rREVISION` and mutable `latest` only after GPU/synthesis validation and independent security disposition approval. No deployment occurs.
 - Inherited vulnerabilities are disclosed, not silently patched or hidden. Packaging fixes remain our responsibility. Image availability does not mean every deployment is safe.
 
-The initial discovery schedule is disabled pending end-to-end integration verification. Candidate builds and promotion are manual workflows. [Release automation](docs/RELEASE_AUTOMATION.md) describes activation, settings, evidence and safeguards. Local tests do not establish hosted-runner capacity or registry publication.
+Upstream discovery runs weekly on Tuesdays at 08:23 UTC and can also be started manually. It can open a reviewable pin-update PR; it never builds or publishes an image. Candidate builds and promotion remain manual workflows. [Release automation](docs/RELEASE_AUTOMATION.md) records settings, verification evidence, remaining integration limits and how to disable the schedule. Local tests do not establish hosted-runner capacity or registry publication.
 
 Pinned inputs improve traceability; this build does **not** yet promise bit-for-bit reproducibility: apt repositories, frontend dependency resolution, source-package build dependencies and runtime model revisions remain moving inputs. The source archive checksum currently fails closed on unreviewed upstream changes.
 
