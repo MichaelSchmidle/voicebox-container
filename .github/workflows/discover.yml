@@ -35,3 +35,28 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 scripts/release_pr.py
+  canary:
+    if: github.repository == 'MichaelSchmidle/voicebox-container' && github.ref == 'refs/heads/test/discovery-canary-20261029' && github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Validate complete repository before disposable writes
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 scripts/release.py validate
+          python3 scripts/release_lint.py
+      - name: Exercise token branch, PR and checks transport without changing pins
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/discovery_canary.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: discovery-canary-record
+          path: canary-record.json
+          if-no-files-found: warn
