@@ -1,0 +1,3 @@
+Disposable Actions-token integration fixture. DO NOT MERGE.
+No upstream version, source commit or packaging revision changed.
+The PR targets a disposable branch, not main.
