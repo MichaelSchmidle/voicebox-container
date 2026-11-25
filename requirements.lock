@@ -144,7 +144,7 @@ orjson==3.12.0
 packaging==26.3
 pandas==3.0.6
 pathable==0.6.0
-pedalboard==0.9.25
+pedalboard==0.9.20
 phonemizer-fork==3.3.2
 pillow==12.3.0
 piper-phonemize @ https://github.com/csukuangfj/piper-phonemize/releases/download/v1.4.7/piper_phonemize-1.4.7-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl
